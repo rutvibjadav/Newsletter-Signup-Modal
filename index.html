@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A thoughtful weekly newsletter for fresh ideas, useful reads, and creative inspiration."
+    />
+    <meta name="theme-color" content="#f6f4ee" />
+    <title>Fieldnotes — Ideas worth keeping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navigation page-width" aria-label="Main navigation">
+        <a class="brand" href="#" aria-label="Fieldnotes home">
+          <span class="brand-mark" aria-hidden="true">f.</span>
+          <span>fieldnotes</span>
+        </a>
+        <div class="nav-links">
+          <a href="#about">Our story</a>
+          <a href="#newsletter">The newsletter</a>
+          <button class="nav-cta" type="button" data-open-modal>Get the letter <span aria-hidden="true">↗</span></button>
+        </div>
+        <button class="mobile-cta" type="button" data-open-modal aria-label="Subscribe to Fieldnotes">
+          Subscribe <span aria-hidden="true">↗</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero page-width" id="about">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A little inspiration, delivered</p>
+          <h1>Good ideas<br />are worth <em>keeping.</em></h1>
+          <p class="hero-description">
+            A considered collection of fresh perspectives, useful reads, and small
+            sparks of inspiration — sent to your inbox every Sunday.
+          </p>
+          <div class="hero-actions">
+            <button class="button button-primary" type="button" data-open-modal>
+              Subscribe now <span aria-hidden="true">↗</span>
+            </button>
+            <span class="no-spam"><span aria-hidden="true">✳</span> No noise. Just good stuff.</span>
+          </div>
+          <div class="reader-proof">
+            <div class="reader-avatars" aria-hidden="true">
+              <span>J</span><span>M</span><span>A</span><span>+</span>
+            </div>
+            <p>Join <strong>2,400+</strong> curious minds</p>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Illustration of a sunny reading nook">
+          <div class="art-sun"></div>
+          <div class="art-window">
+            <div class="window-pane"></div>
+            <div class="window-plant"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="art-table"></div>
+          <div class="art-book">
+            <span class="book-label">FIELD<br />NOTES</span>
+            <span class="book-line"></span>
+          </div>
+          <div class="art-mug"><span></span></div>
+          <div class="art-note">
+            <span class="note-spark">✳</span>
+            <span>Make room<br />for wonder.</span>
+            <span class="note-signature">— fieldnotes</span>
+          </div>
+          <span class="art-caption">A moment for the things that matter</span>
+        </div>
+        <div class="hero-index" aria-hidden="true">VOL. 01 &nbsp; / &nbsp; EST. 2024</div>
+      </section>
+
+      <section class="value-strip page-width" id="newsletter" aria-label="Newsletter details">
+        <div class="value-item">
+          <span class="value-number">01</span>
+          <div><h2>Thoughtfully curated</h2><p>The good reads we can’t stop thinking about.</p></div>
+        </div>
+        <div class="value-item">
+          <span class="value-number">02</span>
+          <div><h2>A moment to pause</h2><p>Ideas to help you see the everyday differently.</p></div>
+        </div>
+        <div class="value-item">
+          <span class="value-number">03</span>
+          <div><h2>In your inbox, weekly</h2><p>One lovely letter, every Sunday morning.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-width">
+      <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">f.</span><span>fieldnotes</span></a>
+      <p>Made for the endlessly curious. <span aria-hidden="true">✳</span></p>
+      <span class="footer-copyright">© 2024 FIELDNOTES</span>
+    </footer>
+
+    <div class="modal-backdrop" id="newsletter-backdrop" hidden>
+      <section
+        class="newsletter-modal"
+        id="newsletter-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        tabindex="-1"
+      >
+        <button class="modal-close" type="button" aria-label="Close newsletter signup">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-decoration" aria-hidden="true">
+          <span class="decoration-sun"></span>
+          <span class="decoration-leaf">✳</span>
+        </div>
+        <p class="modal-eyebrow">YOUR SUNDAY, SORTED</p>
+        <h2 id="modal-title">Join Our <em>Newsletter</em></h2>
+        <p class="modal-description" id="modal-description">
+          Subscribe to receive the latest updates, news, and exclusive offers directly in your inbox.
+        </p>
+        <form class="signup-form" novalidate>
+          <label for="email">Your email address</label>
+          <div class="email-field-wrap">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+              aria-describedby="email-message"
+            />
+            <button class="button button-primary submit-button" type="submit">
+              <span class="submit-label">Subscribe</span><span class="submit-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p class="form-message" id="email-message" role="status" aria-live="polite"></p>
+        </form>
+        <p class="modal-footnote"><span aria-hidden="true">✳</span> No spam, ever. Unsubscribe whenever you like.</p>
+      </section>
+    </div>
+  </body>
+</html>
